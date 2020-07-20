@@ -47,7 +47,6 @@ class SingingFragment : Fragment() {
         getKoin().setProperty("koinUseGpu", false)
         singRecorder = get()
         pitchModelExecutor = get()
-        viewModel.setSingRecorderModule(singRecorder, pitchModelExecutor)
 
         binding.buttonForSinging.setOnClickListener {
 

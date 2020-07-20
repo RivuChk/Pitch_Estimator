@@ -15,20 +15,13 @@ import java.io.IOException
 import java.io.RandomAccessFile
 import kotlin.experimental.and
 
-class SingingFragmentViewModel(application: Application) : AndroidViewModel(application) {
-
-    lateinit var singRecorderObject: SingRecorder
-    lateinit var pitchModelExecutorObject: PitchModelExecutor
+class SingingFragmentViewModel(
+        application: Application,
+        private val singRecorderObject: SingRecorder,
+        private val pitchModelExecutorObject: PitchModelExecutor
+) : AndroidViewModel(application) {
 
     var _singingRunning = false
-
-    init {
-    }
-
-    fun setSingRecorderModule(singRecorder: SingRecorder, pitchModelExecutor: PitchModelExecutor) {
-        singRecorderObject = singRecorder
-        pitchModelExecutorObject = pitchModelExecutor
-    }
 
     fun startSinging() {
 

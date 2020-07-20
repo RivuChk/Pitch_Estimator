@@ -12,6 +12,6 @@ val singingFragmentModule = module {
     single { PitchModelExecutor(get(), getKoin().getProperty("koinUseGpu")!!) }
 
     viewModel {
-        SingingFragmentViewModel(get())
+        SingingFragmentViewModel(get(), get(), get())
     }
 }
